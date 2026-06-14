@@ -54,7 +54,7 @@ streamlit-postgres-opportunity-dashboard/
 
 Default credentials:
 
-- Admin: `admin` / `admin123`
+- ADMIN: `admin` / `admin123`
 - Viewer: `viewer` / `viewer123`
 
 Admin users can add, update, delete, and bulk upload data. Viewer users have read-only access.
