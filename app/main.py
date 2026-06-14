@@ -6,7 +6,6 @@ import auth
 from db import count_opportunities, get_engine
 from utils import render_section_title
 
-
 st.set_page_config(
     page_title="Internship & Job Opportunity Tracking Dashboard",
     page_icon="📊",
