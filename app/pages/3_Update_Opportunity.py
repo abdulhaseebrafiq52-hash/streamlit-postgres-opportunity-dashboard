@@ -1,6 +1,6 @@
 #Updated by MuaazAsifKhan
-import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+from __future__ import annotations
+
 import streamlit as st
 from auth import check_login, require_admin
 from queries import get_all_opportunities, get_opportunity_by_id, update_opportunity
