@@ -34,7 +34,6 @@ DB_PASSWORD = os.getenv("POSTGRES_PASSWORD", "postgres")
 def get_database_url() -> str:
     return f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
-
 @lru_cache(maxsize=1)
 def get_engine() -> Engine:
     engine = create_engine(get_database_url(), pool_pre_ping=True, future=True)
@@ -66,7 +65,6 @@ def _ensure_schema(engine: Engine) -> None:
         return
     with engine.begin() as connection:
         connection.execute(text(INIT_SQL_FILE.read_text(encoding="utf-8")))
-
 
 def _normalize_record(record: Dict[str, Any]) -> Dict[str, Any]:
     cleaned = dict(record)
